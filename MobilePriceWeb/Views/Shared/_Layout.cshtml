@@ -1,0 +1,167 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] - MobilePriceWeb</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MobilePriceWeb.styles.css" asp-append-version="true" />
+
+    <style>
+        body {
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        .navbar-custom {
+            background: rgba(15, 23, 42, 0.95);
+            border-bottom: 1px solid #334155;
+            padding: 15px 0;
+        }
+
+        .navbar-brand {
+            font-size: 24px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #38bdf8, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-link {
+            color: #cbd5e1 !important;
+            font-weight: 600;
+            margin: 0 8px;
+            transition: 0.2s;
+        }
+
+            .nav-link:hover {
+                color: #38bdf8 !important;
+            }
+
+        .navbar-toggler {
+            background: #e2e8f0;
+        }
+
+        main {
+            min-height: 75vh;
+        }
+
+        .footer-custom {
+            background: #0b1120;
+            border-top: 1px solid #334155;
+            padding: 20px 0;
+            color: #94a3b8;
+        }
+
+            .footer-custom a {
+                color: #38bdf8;
+                text-decoration: none;
+            }
+
+                .footer-custom a:hover {
+                    text-decoration: underline;
+                }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-custom">
+            <div class="container">
+
+                <a class="navbar-brand"
+                   asp-area=""
+                   asp-controller="Home"
+                   asp-action="Index">
+                    📱 MobilePrice AI
+                </a>
+
+                <button class="navbar-toggler"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar"
+                        aria-expanded="false"
+                        aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse"
+                     id="mainNavbar">
+
+                    <ul class="navbar-nav ms-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Index">
+                                🏠 Home
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Prediction"
+                               asp-action="Index">
+                                🔮 Prediction
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link"
+                               asp-area=""
+                               asp-controller="Home"
+                               asp-action="Privacy">
+                                🔒 Privacy
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="footer-custom">
+        <div class="container text-center">
+
+            <div class="mb-2">
+                🤖 MobilePrice AI
+            </div>
+
+            <div>
+                &copy; 2026 - MobilePriceWeb -
+                <a asp-area=""
+                   asp-controller="Home"
+                   asp-action="Privacy">
+                    Privacy
+                </a>
+            </div>
+
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

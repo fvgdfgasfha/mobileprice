@@ -1,0 +1,727 @@
+﻿{
+  "Scenario": "Classification",
+  "DataSource": {
+    "Version": 3,
+    "EscapeCharacter": "\"",
+    "ReadMultiLines": false,
+    "KeepDiacritics": false,
+    "KeepPunctuations": false,
+    "AllowQuoting": false,
+    "Type": "TabularFile",
+    "FilePath": "C:\\Users\\Mandarin\\Desktop\\train.csv",
+    "Delimiter": ",",
+    "DecimalMarker": ".",
+    "HasHeader": true,
+    "ColumnProperties": [
+      {
+        "ColumnName": "battery_power",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "blue",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "clock_speed",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "dual_sim",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "fc",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "four_g",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "int_memory",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "m_dep",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "mobile_wt",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "n_cores",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "pc",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "px_height",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "px_width",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "ram",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "sc_h",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "sc_w",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "talk_time",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": false,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "three_g",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "touch_screen",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "wifi",
+        "ColumnPurpose": "Feature",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      },
+      {
+        "ColumnName": "price_range",
+        "ColumnPurpose": "Label",
+        "ColumnDataFormat": "Single",
+        "IsCategorical": true,
+        "Type": "Column",
+        "Version": 5
+      }
+    ]
+  },
+  "Environment": {
+    "Type": "LocalCPU",
+    "Version": 1
+  },
+  "RunHistory": {
+    "Version": 3,
+    "Type": "Result",
+    "Trials": [
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.95593649486590648,
+        "RuntimeInSeconds": 7.471,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "price_range",
+            "InputColumnName": "price_range",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e7": {
+            "L1Regularization": 0.9660755,
+            "L2Regularization": 0.83635485,
+            "LabelColumnName": "price_range",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LbfgsMaximumEntropyMulti",
+        "Score": 0.94937853127062333,
+        "RuntimeInSeconds": 8.322,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e7 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "price_range",
+            "InputColumnName": "price_range",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e7": {
+            "L1Regularization": 0.6398352,
+            "L2Regularization": 6.4205866,
+            "LabelColumnName": "price_range",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.92171732864856326,
+        "RuntimeInSeconds": 2.56,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "price_range",
+            "InputColumnName": "price_range",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfLeaves": 270,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.66014425868898685,
+            "NumberOfTrees": 784,
+            "SubsampleFraction": 0.80035923216800053,
+            "MaximumBinCountPerFeature": 357,
+            "FeatureFraction": 0.95115137069381439,
+            "L1Regularization": 2.2681215375743149E-10,
+            "L2Regularization": 0.87934842912331734,
+            "LabelColumnName": "price_range",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.92135274481874485,
+        "RuntimeInSeconds": 2.087,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "price_range",
+            "InputColumnName": "price_range",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfLeaves": 4,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.68391600464301749,
+            "NumberOfTrees": 821,
+            "SubsampleFraction": 0.78784951841647688,
+            "MaximumBinCountPerFeature": 357,
+            "FeatureFraction": 0.95884827714669985,
+            "L1Regularization": 2.2615857336247682E-10,
+            "L2Regularization": 0.99999977667298645,
+            "LabelColumnName": "price_range",
+            "FeatureColumnName": "Features"
+          }
+        }
+      },
+      {
+        "Version": 1,
+        "Type": "Trial",
+        "TrainerName": "LightGbmMulti",
+        "Score": 0.920432570919786,
+        "RuntimeInSeconds": 3.111,
+        "Parameter": {
+          "_SCHEMA_": "e0 * e1 * e2 * e5 * e10",
+          "e0": {
+            "OutputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ]
+          },
+          "e1": {
+            "InputColumnNames": [
+              "battery_power",
+              "blue",
+              "clock_speed",
+              "dual_sim",
+              "fc",
+              "four_g",
+              "int_memory",
+              "m_dep",
+              "mobile_wt",
+              "n_cores",
+              "pc",
+              "px_height",
+              "px_width",
+              "ram",
+              "sc_h",
+              "sc_w",
+              "talk_time",
+              "three_g",
+              "touch_screen",
+              "wifi"
+            ],
+            "OutputColumnName": "Features"
+          },
+          "e10": {
+            "OutputColumnName": "PredictedLabel",
+            "InputColumnName": "PredictedLabel"
+          },
+          "e2": {
+            "OutputColumnName": "price_range",
+            "InputColumnName": "price_range",
+            "AddKeyValueAnnotationsAsText": false
+          },
+          "e5": {
+            "NumberOfLeaves": 323,
+            "MinimumExampleCountPerLeaf": 20,
+            "LearningRate": 0.6496380318149575,
+            "NumberOfTrees": 980,
+            "SubsampleFraction": 0.99999977667298645,
+            "MaximumBinCountPerFeature": 343,
+            "FeatureFraction": 0.94705466163825924,
+            "L1Regularization": 2.4953360904316851E-10,
+            "L2Regularization": 0.81271560871639059,
+            "LabelColumnName": "price_range",
+            "FeatureColumnName": "Features"
+          }
+        }
+      }
+    ],
+    "Estimators": {
+      "e0": "ReplaceMissingValues",
+      "e1": "Concatenate",
+      "e2": "MapValueToKey",
+      "e3": "FastTreeOva",
+      "e4": "FastForestOva",
+      "e5": "LightGbmMulti",
+      "e6": "LbfgsLogisticRegressionOva",
+      "e7": "LbfgsMaximumEntropyMulti",
+      "e8": "SdcaMaximumEntropyMulti",
+      "e9": "SdcaLogisticRegressionOva",
+      "e10": "MapKeyToValue"
+    },
+    "Schema": "e0 * e1 * e2 * (e3 + e4 + e5 + e6 + e7 + e8 + e9) * e10",
+    "MetricName": "MacroAccuracy",
+    "ModelFilePath": "C:\\Users\\Mandarin\\source\\repos\\MobilePricePrediction1\\MobilePricePrediction1\\MLModel1.mlnet"
+  },
+  "Type": "TrainingConfig",
+  "Version": 5,
+  "TrainingOption": {
+    "Version": 2,
+    "Subsampling": false,
+    "Type": "ClassificationTrainingOption",
+    "TrainingTime": 600,
+    "LabelColumn": "price_range",
+    "ValidationOption": {
+      "Version": 0,
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": 5
+    }
+  }
+}

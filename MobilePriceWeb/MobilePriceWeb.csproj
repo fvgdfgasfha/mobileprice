@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="MLModel1.mlnet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="MLModel1.mlnet" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MobilePricePrediction1\MobilePricePrediction1.csproj" />
+  </ItemGroup>
+
+</Project>
